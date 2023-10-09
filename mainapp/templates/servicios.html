@@ -1,0 +1,39 @@
+{% extends 'padre2.html' %}
+{% load static %}
+
+
+{% block cuerpo %}
+<!--portfolio start -->
+<section id="portfolio" class="portfolio">
+    <div class="portfolio-details">
+        <div class="section-heading text-center">
+            <h2>portfolio</h2>
+        </div>
+        <div class="container">
+            <div class="portfolio-content">
+                <div class="isotope">
+                    <div class="row">
+                        {% for contenido in contenidos %}
+                        <div class="col-sm-4 servicios">
+                            <div class="item">
+                                <h3>{{ contenido.titulo }}</h3>
+                                <img src="{{ contenido.imagen.url }}" alt="{{ contenido.titulo }}" />
+                                <div class="isotope-overlay">
+                                    <a href="#">
+                                        {{ contenido.texto }}
+                                    </a>
+                                </div><!-- /.isotope-overlay -->
+                            </div><!-- /.item -->
+                        </div><!-- /.col -->
+                        {% empty %}
+                        <p>No hay contenido disponible</p>
+                        {% endfor %}
+                    </div><!-- /.row -->
+                </div><!--/.isotope-->
+            </div><!--/.gallery-content-->
+        </div><!--/.container-->
+    </div><!--/.portfolio-details-->
+
+</section><!--/.portfolio-->
+<!--portfolio end -->
+{% endblock cuerpo %}
