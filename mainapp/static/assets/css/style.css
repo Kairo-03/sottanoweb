@@ -2,6 +2,14 @@
 		1.General css (Reset code)
 --------------------------------------*/
 /* Mis cambios loco UwU */
+/* Mis cambios */
+.isotope .servicios .item img {
+    width: 100%;
+    /* Establece el ancho de las imágenes al 100% del contenedor */
+    height: auto;
+    /* Ajusta automáticamente la altura para mantener la proporción */
+}
+
 .login__form {
     color: #000;
 }
@@ -1279,6 +1287,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
         bottom: 7px;
     }
 }
+
 
 
 /*========================Thank you=================

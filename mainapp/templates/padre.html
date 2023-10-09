@@ -29,16 +29,11 @@
                 <a href="{% url 'home' %}" class="padre__logo"><img src="{% static 'assets/logo/icon-navbar.png' %}"
                         alt="Logo"></a>
                 <div class="nav-links__padre">
-                    <!-- <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="smooth-menu"><a class="button__color__transition boton-menu"
-                                href="#about">NOSOTROS</a></li>
-                        <li class="smooth-menu"><a class="button__color__transition boton-menu"
-                                href="#contact">CONTACTO</a></li>
-                        <li class="smooth-menu"><a class="button__color__transition boton-menu" href="#">CLIENTES</a>
+                                href="{% url 'home' %}">INICIO</a>
                         </li>
-                        <li class="smooth-menu"><a class="button__color__transition boton-menu" href="#">SERVICIOS</a>
-                        </li>
-                    </ul> -->
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -68,7 +63,6 @@
     </footer>
     <script src="{% static 'assets/js/jquery.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'assets/js/bootsnav.js' %}"></script>
     <script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
     <script src="{% static 'assets/js/progressbar.js' %}"></script>
