@@ -1,0 +1,406 @@
+{% extends 'padre2.html' %}
+{% load static %}
+
+{% block cuerpo %}
+<!--welcome-hero start -->
+<div id="welcome-hero" class="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'assets/images/about/imagen1.jpg' %}" class="carousel-image" alt="Imagen 1">
+
+        </div>
+        <div class="carousel-item active">
+            <img src="{% static 'assets/images/about/imagen2.png' %}" class="carousel-image" alt="Imagen 1">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <img src="{% static 'assets/images/about/imagen3.jpg' %}" class="carousel-image" alt="Imagen 1">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <!-- Agrega más elementos .carousel-item según sea necesario -->
+    </div>
+    <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
+</div>
+<!--welcome-hero end -->
+
+<!--about start -->
+<section id="about" class="about">
+    <div class="section-heading text-center">
+        <h2>Nosotros</h2>
+    </div>
+    <div class="container">
+        <div class="about-content">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="single-about-txt">
+                        <h3>
+                            LÍDERES EN TRATAMIENTOS TÉRMICOS
+                        </h3>
+                        <h3>
+                            <b>SOTTANO Tratamientos Térmicos.</b>
+                        </h3>
+                        <p>
+                            Empresa Industrial dedicada a los Tratamientos Térmicos de Aceros,
+                            cuyas actividades se iniciaron en el año 1986. Tiene arraigada
+                            presencia en el mercado local y parte de la zona del Departamento
+                            San Justo, provincia de Córdoba y Departamento Castellanos,
+                            provincia de Santa Fe, sirviendo a industrias de las más diversas
+                            ramas, entre ellas la industria automotriz, de máquinas y
+                            herramientas, de electrodoméstica, de implementos agrícolas, etc.
+                            SOTTANO ofrece el servicio de diferentes tipos de tratamientos
+                            térmicos con el fin de mejorar las propiedades mecánicas,
+                            especialmente la dureza y la resistencia. Es la empresa más antigua
+                            del rubro de San Francisco y la región ofreciendo servicios de
+                            cementado, templado, revenido, bonificado, normalizado, recocido,
+                            templado de aceros aliados para matricería, entre otros.
+                        </p>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="single-about-add-info">
+                                    <h3>Telefono</h3>
+                                    <p>987-123-6547</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="single-about-add-info">
+                                    <h3>Correo</h3>
+                                    <p>browny@info.com</p>
+                                </div>
+                            </div>
+                            <!-- <div class="col-sm-4">
+                                <div class="single-about-add-info">
+                                    <h3>website</h3>
+                                    <p>www.brownsine.com</p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-offset-1 col-sm-5">
+                    <div class="single-about-img">
+                        <img src="{% static 'assets/images/about/imagen_info.jpg' %}" alt="profile_image">
+                        <div class="about-list-icon">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/.about-->
+<!--about end -->
+
+<!--experience start -->
+<section id="experience" class="experience">
+    <div class="section-heading text-center">
+        <h2>Nuestra Historia</h2>
+    </div>
+    <div class="container">
+        <div class="experience-content">
+            <div class="main-timeline">
+                <ul>
+                    <li>
+                        <div class="single-timeline-box fix">
+                            <div class="row">
+                                <div class="col-md-5">
+                                </div><!--/.col-->
+                                <div class="col-md-offset-1 col-md-5">
+                                    <div class="timeline">
+                                        <div class="timeline-content">
+                                            <h4 class="title">
+                                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                1986
+                                            </h4>
+                                            <p class="description">
+                                                Tras un acuerdo con los directivos de MACOSER S.A., el encargado
+                                                de Planificación y Control de la Producción, el Ingeniero Marcelo
+                                                Alberto Sottano, junto con Hugo Antonietta, responsable de
+                                                Tratamientos Térmicos, comienzan a realizarlo en su propio
+                                                establecimiento ubicado en Ruta N°19 camino a la localidad de
+                                                Josefina. En sus inicios, la producción se llevaba a cabo en un
+                                                horno
+                                                simple construido por ellos mismos y en baño de sales.
+                                            </p>
+                                        </div><!--/.timeline-content-->
+                                    </div><!--/.timeline-->
+                                </div><!--/.col-->
+                            </div>
+                        </div><!--/.single-timeline-box-->
+                    </li>
+                    <li>
+                        <div class="single-timeline-box fix">
+                            <div class="row">
+                                <div class="col-md-offset-1 col-md-5 experience-time-responsive">
+                                    <div class="experience-time">
+                                        <h2>
+                                            <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                        </h2>
+                                    </div><!--/.experience-time-->
+                                </div><!--/.col-->
+                                <div class="col-md-5">
+                                    <div class="timeline">
+                                        <div class="timeline-content text-right">
+                                            <h4 class="title">
+                                                1990
+                                            </h4>
+                                            <p class="description">
+                                                En 1990, ante la necesidad de acercarse tanto a los clientes como
+                                                proveedores, los dueños adquieren nuevas instalaciones en la ciudad
+                                                de Frontera, provincia de Santa Fe. Debido al incremento de la
+                                                producción, instalan dos nuevos hornos e incorporan operarios. Se
+                                                finaliza con la cementación en baño de sales y se da comienzo a la
+                                                cementación sólida
+                                            </p>
+                                        </div><!--/.timeline-content-->
+                                    </div><!--/.timeline-->
+                                </div><!--/.col-->
+                                <div class="col-md-offset-1 col-md-5 experience-time-main">
+                                    <div class="experience-time">
+                                        <h2>
+                                            <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                        </h2>
+                                        <h3></h3>
+                                    </div><!--/.experience-time-->
+                                </div><!--/.col-->
+                            </div>
+                        </div><!--/.single-timeline-box-->
+                    </li>
+                    <li>
+                        <div class="single-timeline-box fix">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="experience-time text-right">
+                                    </div><!--/.experience-time-->
+                                </div><!--/.col-->
+                                <div class="col-md-offset-1 col-md-5">
+                                    <div class="timeline">
+                                        <div class="timeline-content">
+                                            <h4 class="title">
+                                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                2006
+                                            </h4>
+                                            <p class="description">
+                                                El 16 de Febrero de 2006, Hugo Antonietta, beneficiado por la
+                                                jubilación decide retirarse y es así como se disuelve la sociedad.
+                                            </p>
+                                        </div><!--/.timeline-content-->
+                                    </div><!--/.timeline-->
+                                </div><!--/.col-->
+                            </div>
+                        </div><!--/.single-timeline-box-->
+                    </li>
+                    <li>
+                        <div class="single-timeline-box fix">
+                            <div class="row">
+                                <div class="col-md-offset-1 col-md-5 experience-time-responsive">
+                                    <div class="experience-time">
+                                        <h2>
+                                            <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                        </h2>
+                                    </div><!--/.experience-time-->
+                                </div><!--/.col-->
+                                <div class="col-md-5">
+                                    <div class="timeline">
+                                        <div class="timeline-content text-right">
+                                            <h4 class="title">
+                                                2008
+                                            </h4>
+                                            <p class="description">
+                                                Con el objetivo de atender otras necesidades del mercado y mejorar
+                                                la calidad del tratamiento térmico, el Ing. Marcelo Alberto Sottano,
+                                                compra una planta de Tratamientos Térmicos situada en la ciudad
+                                                de San Francisco. En la misma se inicia un nuevo tipo de cementado
+                                                mediante un horno a atmósfera controlada denominada
+                                                cementación gaseosa.
+                                            </p>
+                                        </div><!--/.timeline-content-->
+                                    </div><!--/.timeline-->
+                                </div><!--/.col-->
+                                <div class="col-md-offset-1 col-md-5 experience-time-main">
+                                    <div class="experience-time">
+                                        <h2>
+                                            <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                        </h2>
+                                    </div><!--/.experience-time-->
+                                </div><!--/.col-->
+                            </div>
+                        </div><!--/.single-timeline-box-->
+                    </li>
+                    <li>
+                        <div class="single-timeline-box fix">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="experience-time text-right">
+                                    </div><!--/.experience-time-->
+                                </div><!--/.col-->
+                                <div class="col-md-offset-1 col-md-5">
+                                    <div class="timeline">
+                                        <div class="timeline-content">
+                                            <h4 class="title">
+                                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                2014
+                                            </h4>
+                                            <p class="description">
+                                                La Municipalidad de San Francisco, en pos del desarrollo industrial,
+                                                le ofrece al dueño de la empresa, un terreno en el Parque Industrial
+                                                de la ciudad, quien accede a la compra del mismo.
+                                            </p>
+                                        </div><!--/.timeline-content-->
+                                    </div><!--/.timeline-->
+                                </div><!--/.col-->
+                            </div>
+                        </div><!--/.single-timeline-box-->
+                    </li>
+                    <li>
+                        <div class="single-timeline-box fix">
+                            <div class="row">
+                                <div class="col-md-offset-1 col-md-5 experience-time-responsive">
+                                    <div class="experience-time">
+                                        <h2>
+                                            <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                        </h2>
+                                    </div><!--/.experience-time-->
+                                </div><!--/.col-->
+                                <div class="col-md-5">
+                                    <div class="timeline">
+                                        <div class="timeline-content text-right">
+                                            <h4 class="title">
+                                                2023
+                                            </h4>
+                                            <p class="description">
+                                                SOTTANO Tratamientos Térmicos abre su nueva nave industrial en
+                                                el Parque Industrial de San Francisco, incorporando un nuevo horno
+                                                de atmósfera controlada, nuevas instalaciones y de última
+                                                tecnología para seguir ofreciendo el mejor servicio posible.
+                                            </p>
+                                        </div><!--/.timeline-content-->
+                                    </div><!--/.timeline-->
+                                </div><!--/.col-->
+                                <div class="col-md-offset-1 col-md-5 experience-time-main">
+                                    <div class="experience-time">
+                                        <h2>
+                                            <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                        </h2>
+                                    </div><!--/.experience-time-->
+                                </div><!--/.col-->
+                            </div>
+                        </div><!--/.single-timeline-box-->
+                    </li>
+                </ul>
+            </div><!--.main-timeline-->
+        </div><!--.experience-content-->
+    </div>
+
+</section><!--/.experience-->
+<!--experience end -->
+<!--contact start -->
+<section id="contact" class="contact">
+    <div class="section-heading text-center">
+        <h2>Contactanos</h2>
+    </div>
+    <div class="map">
+    </div>
+    <div class="container">
+        <div class="contact-content">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-5 col-sm-6">
+                    <div class="single-contact-box">
+                        <div class="contact-form">
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="name" placeholder="Nombre*"
+                                                name="name">
+                                        </div><!--/.form-group-->
+                                    </div><!--/.col-->
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="email" placeholder="Correo*"
+                                                name="email">
+                                        </div><!--/.form-group-->
+                                    </div><!--/.col-->
+                                </div><!--/.row-->
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject"
+                                                name="subject">
+                                        </div><!--/.form-group-->
+                                    </div><!--/.col-->
+                                </div><!--/.row-->
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="8" id="comment"
+                                                placeholder="Message"></textarea>
+                                        </div><!--/.form-group-->
+                                    </div><!--/.col-->
+                                </div><!--/.row-->
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="single-contact-btn">
+                                            <a class="contact-btn" href="#" role="button">submit</a>
+                                        </div><!--/.single-single-contact-btn-->
+                                    </div><!--/.col-->
+                                </div><!--/.row-->
+                            </form><!--/form-->
+                        </div><!--/.contact-form-->
+                    </div><!--/.single-contact-box-->
+                </div><!--/.col-->
+                <div class="col-md-offset-1 col-md-5 col-sm-6">
+                    <div class="single-contact-box">
+                        <div class="contact-adress">
+                            <div class="contact-add-head">
+                                <h3>Sottano</h3>
+                                <p>Envianos un mensaje</p>
+                            </div>
+                            <div class="contact-add-info">
+                                <div class="single-contact-add-info">
+                                    <h3>Teléfono</h3>
+                                    <p>987-123-6547</p>
+                                </div>
+                                <div class="single-contact-add-info">
+                                    <h3>email</h3>
+                                    <p>browny@info.com</p>
+                                </div>
+                            </div><!--/.contact-adress-->
+                            <!-- <div class="hm-foot-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div> Lista de iconos -->
+                        </div><!--/.single-contact-box-->
+                    </div><!--/.col-->
+                </div><!--/.row-->
+            </div><!--/.contact-content-->
+        </div><!--/.container-->
+
+</section><!--/.contact-->
+<!--contact end -->
+{% endblock cuerpo %}
