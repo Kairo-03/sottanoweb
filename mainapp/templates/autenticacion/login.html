@@ -1,8 +1,8 @@
-{% extends 'padre.html' %}
+{% extends 'padre2.html' %}
 {% load static %}
 
 
-{% block main %}
+{% block cuerpo %}
 <div class="container container__login">
     <form class="login__form" action="" method="post">
 
@@ -10,8 +10,11 @@
 
         {{form.as_p|safe}}
 
-        <button type="submit">Iniciar sesion</button>
-        <a href="{% url 'register' %}">Registrarse</a>
+        <div class="login__form__buttons">
+            <button type="submit">Iniciar sesion</button>
+            <button type="submit"><a href="{% url 'register' %}">Iniciar Sesión</a></button>
+        </div>
+
     </form>
 </div>
-{% endblock main %}
+{% endblock cuerpo %}

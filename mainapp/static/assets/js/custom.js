@@ -1,42 +1,50 @@
 $(document).ready(function () {
-	"use strict";
+    "use strict";
 
-	window.addEventListener("scroll", function () {
-		let nav = document.querySelector("#mi-nav");
+    const path = window.location.pathname;
+    let nav = document.querySelector("#mi-nav");
+    let header = document.querySelector("#header__transparente");
 
-		if (window.scrollY > 100) {
-			nav.style.backgroundColor = "rgba(255, 255, 255, 1)";
-		} else {
-			nav.style.backgroundColor = "rgba(0, 0, 0, 0)";
-		}
-	});
+    function setOpaqueBackground() {
+        nav.style.backgroundColor = "rgba(255, 255, 255, 1)"; // Fondo blanco
+        header.style.backgroundColor = "rgba(255, 255, 255, 1)"; // Fondo blanco
+    }
 
-	function cambiarColorBotones(color) {
-		let botones = document.querySelectorAll("#navbar-menu .smooth-menu a");
+    function setTransparentBackground() {
+        nav.style.backgroundColor = "rgba(0, 0, 0, 0)"; // Transparente
+        header.style.backgroundColor = "rgba(0, 0, 0, 0)"; // Transparente
+    }
 
-		for (let i = 0; i < botones.length; i++) {
-			botones[i].style.color = color;
-		}
-	}
-	window.addEventListener("scroll", function () {
-		if (window.scrollY > 100) {
-			cambiarColorBotones("black");
-		} else {
-			cambiarColorBotones("white");
-		}
-	});
+    function cambiarColorBotones(color) {
+        let botones = document.querySelectorAll("#navbar-menu .smooth-menu a");
+        for (let i = 0; i < botones.length; i++) {
+            botones[i].style.color = color;
+        }
+    }
 
-	// Llama a la función cambiarColorBotones cuando se hace scroll
+    // Comprobar si la ruta actual es servicios, login o register
+    if (path.includes("/servicios") || path.includes("/login") || path.includes("/register")) {
+        setOpaqueBackground();
+        cambiarColorBotones("black");
+    } else {
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 100) {
+                setOpaqueBackground();
+                cambiarColorBotones("black");
+            } else {
+                setTransparentBackground();
+                cambiarColorBotones("white");
+            }
+        });
+    }
 
-	document.addEventListener("DOMContentLoaded", function () {
-		let currentIndex = 0;
-		const items = document.querySelectorAll('.carousel-item');
+    function cambiarColorBotones(color) {
+        let botones = document.querySelectorAll("#navbar-menu .smooth-menu a");
 
-		function showSlide(index) {
-			items.forEach(item => {
-				item.style.transform = `translateX(-${index * 100}%)`;
-			});
-		}
+        for (let i = 0; i < botones.length; i++) {
+            botones[i].style.color = color;
+        }
+    }
 
 		function prevSlide() {
 			currentIndex = (currentIndex - 1 + items.length) % items.length;
@@ -87,11 +95,17 @@ $(document).ready(function () {
 	//=============
 
 	$('li.smooth-menu a').bind("click", function (event) {
-		event.preventDefault();
 		var anchor = $(this);
-		$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top - 0
-		}, 1200, 'easeInOutExpo');
+		var href = anchor.attr('href');
+	
+		// Comprueba si el enlace comienza con "#", lo que indica un enlace interno.
+		if (href.startsWith("#")) {
+			event.preventDefault();
+			$('html, body').stop().animate({
+				scrollTop: $(href).offset().top - 0
+			}, 1200, 'swing');
+			
+		}
 	});
 
 	$('body').scrollspy({
@@ -166,5 +180,3 @@ $(document).ready(function () {
 		$(".header-text h2,.header-text p").addClass("animated fadeInUp").css({ 'opacity': '0' });
 		$(".header-text a").addClass("animated fadeInDown").css({ 'opacity': '0' });
 	});
-
-});

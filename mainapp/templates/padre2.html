@@ -18,14 +18,14 @@
     <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/bootsnav.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
 
 <body>
     <header id="header__transparente" class="top-area">
         <!-- Header -->
-        <div class="header-area">
+        <div class="header-area header-area2">
             <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background" id="mi-nav">
                 <div id="header__nav__container" class="container">
                     <div class="navbar-header">
@@ -37,14 +37,12 @@
                                 src="{% static 'assets/logo/icon-navbar.png' %}" alt="Sottano Icon"></a>
                     </div>
                     <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-                        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <ul class="nav navbar-nav navbar-right" id="button__nav" data-in="fadeInDown" data-out="fadeOutUp">
                             <!-- Nav area -->
                             <li class="smooth-menu"><a class="button__color__transition boton-menu"
-                                    href="#about">Nosotros</a></li>
+                                    href="#nosotros">Nosotros</a></li>
                             <li class="smooth-menu"><a class="button__color__transition boton-menu"
-                                    href="#contact">contact</a></li>
-                            <!-- <li class="smooth-menu"><a class="button__color__transition boton-menu" href="#">clients</a>
-                            </li> -->
+                                    href="#contactos">Contactos</a></li>
                             <li class="smooth-menu"><a class="button__color__transition boton-menu"
                                     href="{% url 'serv' %}">Servicios</a></li>
                             {% if user.is_authenticated %}
@@ -69,6 +67,7 @@
                 </div>
             </nav>
         </div>
+    </header>
         <div class="clearfix"></div>
 
 
