@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate
 from .form import UserRegisterForm
+from .models import Contenido
 # Create your views here.
 
 
@@ -11,8 +12,9 @@ def cargar_index(request):
     return render(request, "index.html", {'es_staff': es_staff})
 
 
-def cargar_proyectos(request):
-    return render(request, "proyectos.html")
+def cargar_servicios(request):
+    contenidos = Contenido.objects.all()
+    return render(request, 'servicios.html', {'contenidos': contenidos})
 
 
 def login_form(request):
