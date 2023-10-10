@@ -19,7 +19,7 @@ from django.urls import path
 from django.contrib.auth.views import LogoutView
 from django.conf import settings
 from django.conf.urls.static import static
-from mainapp.views import cargar_index, login_form, register_form, cargar_servicios
+from mainapp.views import cargar_index, editarPerfil, login_form, register_form, cargar_servicios
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +28,6 @@ urlpatterns = [
     path('register/', register_form, name="register"),
     path('logout/', LogoutView.as_view(template_name="index.html"), name="logout"),
     path('servicios/', cargar_servicios, name="serv"),
+    path('editarPerfil/', editarPerfil, name="editarperfil")
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

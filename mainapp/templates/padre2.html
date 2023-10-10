@@ -37,73 +37,87 @@
                                 src="{% static 'assets/logo/icon-navbar.png' %}" alt="Sottano Icon"></a>
                     </div>
                     <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-                        <ul class="nav navbar-nav navbar-right" id="button__nav" data-in="fadeInDown" data-out="fadeOutUp">
+                        <ul class="nav navbar-nav navbar-right" id="button__nav" data-in="fadeInDown"
+                            data-out="fadeOutUp">
                             <!-- Nav area -->
+                            {% if request.path == '/index/' %}
                             <li class="smooth-menu"><a class="button__color__transition boton-menu"
                                     href="#nosotros">Nosotros</a></li>
                             <li class="smooth-menu"><a class="button__color__transition boton-menu"
                                     href="#contactos">Contactos</a></li>
+                            {% endif %}
                             <li class="smooth-menu"><a class="button__color__transition boton-menu"
                                     href="{% url 'serv' %}">Servicios</a></li>
                             {% if user.is_authenticated %}
                             {% if user.is_staff %}
                             <!-- Mostrar el enlace solo si el usuario está autenticado y es administrador -->
                             <li class="smooth-menu">
-                                <a class="button__color__transition boton-menu" href="#">Panel de Administración</a>
+                                <a class="button__color__transition boton-menu" href="{% url 'admin:index' %}">Panel de
+                                    Administración</a>
                             </li>
                             {% endif %}
                             <li class="smooth-menu">
                                 <a class="button__color__transition boton-menu" href="{% url 'logout' %}">Cerrar
                                     Sesión</a>
                             </li>
+                            <li class="smooth-menu">
+                                <a class="button__color__transition boton-menu" href="{% url 'editarperfil' %}">Editar
+                                    Perfil</a>
+                            </li>
+                            <li>
+                                <img class="logo_img" id="img_logo" src="{{ avatar.imagen.url }}" alt="">
+                                <p class="text-muted small mb-4 mb-lg-0">Hola, {{user.first_name}}!!</p>
+                            </li>
                             {% else %}
                             <li class="smooth-menu">
                                 <a class="button__color__transition boton-menu" href="{% url 'login' %}">Iniciar
                                     Sesión</a>
                             </li>
-                            {% endif %}
+                            <li>
+
+                                {% endif %}
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
-        <div class="clearfix"></div>
+    <div class="clearfix"></div>
 
 
-        {% block cuerpo %}
+    {% block cuerpo %}
 
-        {% endblock cuerpo %}
+    {% endblock cuerpo %}
 
 
-        <footer id="footer-copyright" class="footer-copyright">
-            <!-- Texto Footer -->
-            <div class="container">
-                <div class="hm-footer-copyright text-center">
-                    <p>&copy; copyright sottano. design and developed by <a href="#">Fernando Romero</a></p>
-                </div>
+    <footer id="footer-copyright" class="footer-copyright">
+        <!-- Texto Footer -->
+        <div class="container">
+            <div class="hm-footer-copyright text-center">
+                <p>&copy; copyright sottano. design and developed by <a href="#">Fernando Romero</a></p>
             </div>
-            <!-- Icono fijo de scroll up -->
-            <div id="return-to-top-whatsapp">
-                <div class="circulo"></div>
-                <a href="https://api.whatsapp.com/send?phone=5491159198164" class="padre__whatsapp__link"></a>
+        </div>
+        <!-- Icono fijo de scroll up -->
+        <div id="return-to-top-whatsapp">
+            <div class="circulo"></div>
+            <a href="https://api.whatsapp.com/send?phone=5491159198164" class="padre__whatsapp__link"></a>
+        </div>
+        <div id="scroll-Top">
+            <div class="return-to-top">
+                <a class="fa fa-angle-up " id="scroll-top"></a>
             </div>
-            <div id="scroll-Top">
-                <div class="return-to-top">
-                    <a class="fa fa-angle-up " id="scroll-top"></a>
-                </div>
-            </div>
-        </footer>
-        <script src="{% static 'assets/js/jquery.js' %}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'assets/js/bootsnav.js' %}"></script>
-        <script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
-        <script src="{% static 'assets/js/progressbar.js' %}"></script>
-        <script src="{% static 'assets/js/jquery.appear.js' %}"></script>
-        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <script src="{% static 'assets/js/custom.js' %}"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        </div>
+    </footer>
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootsnav.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'assets/js/progressbar.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.appear.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

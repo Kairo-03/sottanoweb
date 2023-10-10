@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Formulario - Editar Perfil</h1>
+    <h2>De {{usuario}}</h2>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <table>
+
+            {{miFormulario.as_table}}
+            {% if miFormulario.errors %}
+            <ul>
+                {% for field, error_list in miFormulario.errors.items %}
+                {% for error in error_list %}
+                <li>{{ field }}: {{ error }}</li>
+                {% endfor %}
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </table>
+
+        <input type="submit" , value="Enviar">
+
+    </form>
+</div
